@@ -9,9 +9,11 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class UnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun generates_number(){
+        val dice = DiceRoller(6)
+        val rollResult = dice.generateRandomNumber()
+        assertTrue("The value of rollResult was not between 1 and 6", rollResult in 2..6)
     }
 }
